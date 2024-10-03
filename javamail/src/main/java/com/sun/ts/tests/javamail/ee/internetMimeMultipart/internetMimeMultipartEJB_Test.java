@@ -61,6 +61,7 @@ public class internetMimeMultipartEJB_Test extends internetMimeMultipart_Test {
 		if (resURL != null) {
 			ejbClient.addAsManifestResource(resURL, "sun-application-client.xml");
 		}
+		
 
 
 		JavaArchive ejb = ShrinkWrap.create(JavaArchive.class, "internetMimeMultipart_ejb_vehicle_ejb.jar");

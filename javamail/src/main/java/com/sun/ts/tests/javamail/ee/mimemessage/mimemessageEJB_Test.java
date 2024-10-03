@@ -66,7 +66,7 @@ public class mimemessageEJB_Test extends mimemessage_Test implements Serializabl
 		if (resURL != null) {
 			ejbClient.addAsManifestResource(resURL, "sun-application-client.xml");
 		}
-
+		
 
 		JavaArchive ejb = ShrinkWrap.create(JavaArchive.class, "mimemessage_ejb_vehicle_ejb.jar");
 		ejb.addPackages(true, "com.sun.ts.tests.javamail.ee.common");

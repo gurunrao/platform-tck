@@ -19,8 +19,8 @@
 -->
 
 <sun-web-app>
-  <resource-ref>
-    <res-ref-name>mail/MailSession</res-ref-name>
-    <jndi-name>mail/Session</jndi-name>
-  </resource-ref>
+	<resource-ref>
+		<res-ref-name>mail/MailSession</res-ref-name>
+		<jndi-name>mail/Session</jndi-name>
+	</resource-ref>
 </sun-web-app>

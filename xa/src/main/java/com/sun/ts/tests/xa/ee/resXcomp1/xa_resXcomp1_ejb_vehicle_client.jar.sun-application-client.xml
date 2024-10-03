@@ -19,8 +19,8 @@
 -->
 
 <sun-application-client>
-  <ejb-ref>
-    <ejb-ref-name>ejb/EJBVehicle</ejb-ref-name>
-    <jndi-name>xa_resXcomp1_ejb_vehicle</jndi-name>
-  </ejb-ref>
+	<ejb-ref>
+		<ejb-ref-name>ejb/EJBVehicle</ejb-ref-name>
+		<jndi-name>xa_resXcomp1_ejb_vehicle</jndi-name>
+	</ejb-ref>
 </sun-application-client>

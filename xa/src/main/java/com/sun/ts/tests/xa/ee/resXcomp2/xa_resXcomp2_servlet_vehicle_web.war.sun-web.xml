@@ -19,28 +19,28 @@
 -->
 
 <sun-web-app>
-  <ejb-ref>
-    <ejb-ref-name>ejb/MyEjbReference</ejb-ref-name>
-    <jndi-name>xa_resXcomp2_ejb_TxRequired_Ejb1TestEJB2</jndi-name>
-  </ejb-ref>
-  <ejb-ref>
-    <ejb-ref-name>ejb/Ejb2Test</ejb-ref-name>
-    <jndi-name>xa_resXcomp2_ejb_TxRequired_Ejb2TestEJB2</jndi-name>
-  </ejb-ref>
-  <resource-ref>
-    <res-ref-name>eis/whitebox-tx</res-ref-name>
-    <jndi-name>eis/whitebox-tx</jndi-name>
-    <default-resource-principal>
-      <name>cts1</name>
-      <password>cts1</password>
-    </default-resource-principal>
-  </resource-ref>
-  <resource-ref>
-    <res-ref-name>eis/JDBCwhitebox-tx</res-ref-name>
-    <jndi-name>eis/JDBCwhitebox-tx</jndi-name>
-    <default-resource-principal>
-      <name>cts1</name>
-      <password>cts1</password>
-    </default-resource-principal>
-  </resource-ref>
+	<ejb-ref>
+		<ejb-ref-name>ejb/MyEjbReference</ejb-ref-name>
+		<jndi-name>xa_resXcomp2_ejb_TxRequired_Ejb1TestEJB2</jndi-name>
+	</ejb-ref>
+	<ejb-ref>
+		<ejb-ref-name>ejb/Ejb2Test</ejb-ref-name>
+		<jndi-name>xa_resXcomp2_ejb_TxRequired_Ejb2TestEJB2</jndi-name>
+	</ejb-ref>
+	<resource-ref>
+		<res-ref-name>eis/whitebox-tx</res-ref-name>
+		<jndi-name>eis/whitebox-tx</jndi-name>
+		<default-resource-principal>
+			<name>cts1</name>
+			<password>cts1</password>
+		</default-resource-principal>
+	</resource-ref>
+	<resource-ref>
+		<res-ref-name>eis/JDBCwhitebox-tx</res-ref-name>
+		<jndi-name>eis/JDBCwhitebox-tx</jndi-name>
+		<default-resource-principal>
+			<name>cts1</name>
+			<password>cts1</password>
+		</default-resource-principal>
+	</resource-ref>
 </sun-web-app>

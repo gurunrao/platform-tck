@@ -54,7 +54,7 @@
         <mailboxFolder1>${project.build.directory}/../mailboxes</mailboxFolder1>
         <smtp.port>1025</smtp.port>
         <tck.version>11.0.0-SNAPSHOT</tck.version>
-        <version.jakarta.tck.arquillian>1.0.0-M16</version.jakarta.tck.arquillian>
+        <version.jakarta.tck.arquillian>1.0.0-M17</version.jakarta.tck.arquillian>
     </properties>
     <dependencyManagement>
         <dependencies>

@@ -70,6 +70,8 @@ public class internetaddressEJB_Test extends internetaddress_Test
 		if (resURL != null) {
 			ejbClient.addAsManifestResource(resURL, "sun-application-client.xml");
 		}
+		
+
 
 		JavaArchive ejb = ShrinkWrap.create(JavaArchive.class, "internetaddress_ejb_vehicle_ejb.jar");
 		ejb.addPackages(true, "com.sun.ts.tests.javamail.ee.common");

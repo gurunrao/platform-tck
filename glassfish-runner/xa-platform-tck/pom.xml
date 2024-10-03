@@ -62,7 +62,7 @@
         <sql.directory>./sql</sql.directory>
         <tck.artifactId>jakarta.tck.jdbc</tck.artifactId>
         <tck.version>11.0.0-SNAPSHOT</tck.version>
-        <version.jakarta.tck.arquillian>1.0.0-M16</version.jakarta.tck.arquillian>
+        <version.jakarta.tck.arquillian>1.0.0-M17</version.jakarta.tck.arquillian>
 
         <!-- XA properties -->
         <xa.datasource.class>org.apache.derby.jdbc.ClientXADataSource</xa.datasource.class>

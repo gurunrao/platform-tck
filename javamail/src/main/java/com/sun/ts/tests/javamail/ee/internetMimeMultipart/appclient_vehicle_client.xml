@@ -17,14 +17,16 @@
 
 -->
 
-<application-client version="10" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/application-client_10.xsd">
-  <description>TS app client vehicle</description>
-  <display-name>appclient_vehicle_client</display-name>
-  <resource-ref>
-        <description>description</description>
-        <res-ref-name>mail/MailSession</res-ref-name>
-        <res-type>jakarta.mail.Session</res-type>
-        <res-auth>Application</res-auth>
-        <res-sharing-scope>Shareable</res-sharing-scope>
-  </resource-ref>
+<application-client version="10" xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/application-client_10.xsd">
+	<description>TS app client vehicle</description>
+	<display-name>appclient_vehicle_client</display-name>
+	<resource-ref>
+		<description>description</description>
+		<res-ref-name>mail/MailSession</res-ref-name>
+		<res-type>jakarta.mail.Session</res-type>
+		<res-auth>Application</res-auth>
+		<res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>
 </application-client>
