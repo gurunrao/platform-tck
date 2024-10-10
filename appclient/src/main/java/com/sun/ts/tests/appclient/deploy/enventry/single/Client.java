@@ -22,6 +22,8 @@ package com.sun.ts.tests.appclient.deploy.enventry.single;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.Test;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
@@ -64,6 +66,7 @@ public class Client extends EETest {
    *                 its runtime value match the DD value.
    *
    */
+  @Test
   public void testString() throws Exception {
     boolean pass;
 
@@ -87,6 +90,7 @@ public class Client extends EETest {
    *                 its runtime value match the DD value.
    *
    */
+  @Test
   public void testBoolean() throws Exception {
     boolean pass;
 
@@ -110,6 +114,7 @@ public class Client extends EETest {
    *                 its runtime value match the DD value.
    *
    */
+  @Test
   public void testByte() throws Exception {
     boolean pass;
 
@@ -133,6 +138,7 @@ public class Client extends EETest {
    *                 its runtime value match the DD value.
    *
    */
+  @Test
   public void testShort() throws Exception {
     boolean pass;
 
@@ -156,6 +162,7 @@ public class Client extends EETest {
    *                 its runtime value match the DD value.
    *
    */
+  @Test
   public void testInteger() throws Exception {
     boolean pass;
 
@@ -179,6 +186,7 @@ public class Client extends EETest {
    *                 its runtime value match the DD value.
    *
    */
+  @Test
   public void testLong() throws Exception {
     boolean pass;
 
@@ -202,6 +210,7 @@ public class Client extends EETest {
    *                 its runtime value match the DD value.
    *
    */
+  @Test
   public void testFloat() throws Exception {
     boolean pass;
 
@@ -225,6 +234,7 @@ public class Client extends EETest {
    *                 its runtime value match the DD value.
    *
    */
+  @Test
   public void testDouble() throws Exception {
     boolean pass;
     Double value;
@@ -249,6 +259,7 @@ public class Client extends EETest {
    *                 check that their runtime value match their DD value.
    *
    */
+  @Test
   public void testAll() throws Exception {
     try {
       logTrace("[Client] testAll() : starting...");

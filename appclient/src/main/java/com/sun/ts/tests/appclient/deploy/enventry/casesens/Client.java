@@ -22,6 +22,8 @@ package com.sun.ts.tests.appclient.deploy.enventry.casesens;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.Test;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
@@ -65,6 +67,7 @@ public class Client extends EETest {
    *                 environment entries. Check that their runtime values are
    *                 distinct and match the ones specified in the DD.
    */
+  @Test
   public void testCaseSensitivity() throws Exception {
     boolean pass;
 

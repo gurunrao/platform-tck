@@ -22,6 +22,8 @@ package com.sun.ts.tests.appclient.deploy.resref.single;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.Test;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
@@ -44,6 +46,7 @@ public class Client extends EETest {
    * @class.setup_props: org.omg.CORBA.ORBClass; java.naming.factory.initial;
    *                     webServerHost; webServerPort;
    */
+  @Test
   public void setup(String[] args, Properties props) throws Exception {
     this.props = props;
 
@@ -66,6 +69,7 @@ public class Client extends EETest {
    *                 lookup the datasource. - We can use it to open a DB
    *                 connection.
    */
+  @Test
   public void testDatasource() throws Exception {
     boolean pass;
 
@@ -92,6 +96,7 @@ public class Client extends EETest {
    *                 lookup the URL. - We can use this URL factory to open a
    *                 connection to a HTML page bundled in the application.
    */
+  @Test
   public void testURL() throws Exception {
     boolean pass;
 
@@ -117,6 +122,7 @@ public class Client extends EETest {
    *                 Check that: - We can deploy the application. - We can
    *                 lookup the JMS Queue Connection Factory.
    */
+  @Test
   public void testQueue() throws Exception {
     boolean pass;
 
@@ -142,6 +148,7 @@ public class Client extends EETest {
    *                 Check that: - We can deploy the application. - We can
    *                 lookup the JMS Topic Connection Factory.
    */
+  @Test
   public void testTopic() throws Exception {
     boolean pass;
 
@@ -168,6 +175,7 @@ public class Client extends EETest {
    *                 Check that: - We can deploy the application. - We can
    *                 lookup all the declared resource factories.
    */
+  @Test
   public void testAll() throws Exception {
     try {
       testDatasource();

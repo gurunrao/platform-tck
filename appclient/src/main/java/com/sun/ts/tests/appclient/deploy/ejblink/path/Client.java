@@ -22,6 +22,8 @@ package com.sun.ts.tests.appclient.deploy.ejblink.path;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.Test;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
@@ -87,6 +89,7 @@ public class Client extends EETest {
    *                 identities (as reported by the String env. entry) match the
    *                 ones specified in the DD.
    */
+  @Test
   public void testScope() throws Exception {
     ReferencedBean bean1 = null;
     ReferencedBean2 bean2 = null;

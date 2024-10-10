@@ -22,11 +22,18 @@ package com.sun.ts.tests.appclient.deploy.compat9_10;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.jboss.arquillian.junit5.ArquillianExtension;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
 import com.sun.ts.lib.util.TestUtil;
 
+@ExtendWith(ArquillianExtension.class)
 public class Client extends EETest {
 
   private static final String prefix = "java:comp/env/ejb/";
@@ -47,10 +54,10 @@ public class Client extends EETest {
   /**
    * @class.setup_props: org.omg.CORBA.ORBClass; java.naming.factory.initial;
    */
-  public void setup(String[] args, Properties props) throws Exception {
+  @BeforeEach
+  public void setup() throws Exception {
 
     try {
-      this.props = props;
       nctx = new TSNamingContext();
       logMsg("[Client] Setup succeed (got naming context).");
     } catch (Exception e) {
@@ -76,6 +83,7 @@ public class Client extends EETest {
    *                 Run the client and check we can call a business method on
    *                 the referenced bean at runtime.
    */
+  @Test
   public void test910DD() throws Exception {
     TestBean bean = null;
     String beanName;
@@ -96,6 +104,7 @@ public class Client extends EETest {
     }
   }
 
+  @AfterEach
   public void cleanup() throws Exception {
     logMsg("[Client] cleanup()");
   }

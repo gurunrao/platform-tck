@@ -22,6 +22,8 @@ package com.sun.ts.tests.appclient.deploy.resref.scope;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.Test;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
@@ -78,6 +80,7 @@ public class Client extends EETest {
    *                 manager connection factories reference.
    *
    */
+  @Test
   public void testScope() throws Exception {
     boolean pass;
 

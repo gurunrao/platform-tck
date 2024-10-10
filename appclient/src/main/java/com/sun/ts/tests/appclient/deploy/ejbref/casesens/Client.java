@@ -22,6 +22,8 @@ package com.sun.ts.tests.appclient.deploy.ejbref.casesens;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.Test;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
@@ -84,6 +86,7 @@ public class Client extends EETest {
    *                 are distinct and match the ones specified in the DD
    *                 (validates that the EJB reference are resolved correctly).
    */
+  @Test
   public void testCaseSensitivity() throws Exception {
     ReferencedBean bean1 = null;
     ReferencedBean bean2 = null;

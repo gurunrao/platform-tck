@@ -22,11 +22,15 @@ package com.sun.ts.tests.appclient.deploy.ejblink.casesens;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
 import com.sun.ts.lib.util.TestUtil;
 
+@ExtendWith(ArquillianExtension.class)
 public class Client extends EETest {
 
   private static final String prefix = "java:comp/env/ejb/";
@@ -85,6 +89,7 @@ public class Client extends EETest {
    *                 match the references specified in the DD (validates that
    *                 the EJB references were resolved correctly).
    */
+  @Test
   public void testCaseSensitivity() throws Exception {
     CaseBean bean1 = null;
     CaseBean bean2 = null;

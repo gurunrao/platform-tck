@@ -22,6 +22,8 @@ package com.sun.ts.tests.appclient.deploy.ejbref.scope;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.Test;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
@@ -90,6 +92,7 @@ public class Client extends EETest {
    *                 the application client DD (validates that this EJB
    *                 reference is resolved correctly).
    */
+  @Test
   public void testScope() throws Exception {
     ReferencedBean bean = null;
     String beanName;

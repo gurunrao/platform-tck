@@ -22,6 +22,8 @@ package com.sun.ts.tests.appclient.deploy.resref.casesens;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.Test;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
@@ -71,6 +73,7 @@ public class Client extends EETest {
    *                 This validates that the resource references were resolved
    *                 correctly.
    */
+  @Test
   public void testCaseSensitivity() throws Exception {
     boolean pass;
 

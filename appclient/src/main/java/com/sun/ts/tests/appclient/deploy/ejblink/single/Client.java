@@ -22,6 +22,8 @@ package com.sun.ts.tests.appclient.deploy.ejblink.single;
 
 import java.util.Properties;
 
+import org.junit.jupiter.api.Test;
+
 import com.sun.ts.lib.harness.Status;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.lib.util.TSNamingContext;
@@ -77,6 +79,7 @@ public class Client extends EETest {
    *                 that the EJB reference was resolved consistently with the
    *                 DD.
    */
+  @Test
   public void testStateless() throws Exception {
     boolean pass;
 
@@ -102,6 +105,7 @@ public class Client extends EETest {
    *                 found only in this particular bean: This is to check that
    *                 the EJB reference was resolved consistently with the DD.
    */
+  @Test
   public void testStateful() throws Exception {
     boolean pass;
 
