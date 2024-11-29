@@ -118,7 +118,7 @@ public class WorkContextClientEjbTest extends com.sun.ts.tests.connector.localTx
               workcontext_ejb_vehicle_ejb.addAsManifestResource(ejbResURL1, "ejb-jar.xml");
             }
             // The sun-ejb-jar.xml file
-            ejbResURL1 = WorkContextClient.class.getResource("workcontext_jsp_vehicle_web.war.sun-web.xml");
+            ejbResURL1 = WorkContextClient.class.getResource("workcontext_ejb_vehicle_ejb.jar.sun-ejb-jar.xml");
             if(ejbResURL1 != null) {
               workcontext_ejb_vehicle_ejb.addAsManifestResource(ejbResURL1, "sun-ejb-jar.xml");
             }
