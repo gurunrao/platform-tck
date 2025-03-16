@@ -66,8 +66,8 @@ public class Client extends EETest {
   }
   
   
-  @TargetsContainer("tck-javatest")
-  @OverProtocol("javatest")	
+  @TargetsContainer("tck-appclient")
+  @OverProtocol("appclient")	
  
 	@Deployment(testable = true)
 	public static EnterpriseArchive createDeployment(@ArquillianResource TestArchiveProcessor archiveProcessor)

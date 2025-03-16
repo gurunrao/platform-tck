@@ -17,53 +17,60 @@
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>org.glassfish</groupId>
-        <artifactId>standalone-tck</artifactId>
-        <version>11.0.0</version>
-        <relativePath>../pom.xml</relativePath>
+        <groupId>org.eclipse.ee4j</groupId>
+        <artifactId>project</artifactId>
+        <version>1.0.9</version>
+        <relativePath />
     </parent>
-    <groupId>jakarta</groupId>
-    <artifactId>glassfish.appclient-platform-tck</artifactId>
-    <version>11.0.0</version>
+
+    <artifactId>appclient-tck</artifactId>
+
     <packaging>jar</packaging>
+
     <properties>
         <admin.pass>admin</admin.pass>
         <admin.pass.file>/tmp/ripassword</admin.pass.file>
         <admin.pass.file.encoded>${admin.pass.file}.encoded</admin.pass.file.encoded>
         <admin.user>admin</admin.user>
-        <arquillian.core.version>1.9.1.Final</arquillian.core.version>
-        <arquillian.junit>1.9.1.Final</arquillian.junit>
+
         <exec.asadmin>${glassfish.home}/glassfish/bin/asadmin</exec.asadmin>
         <exec.asadmin>${project.build.directory}/${glassfish.toplevel.dir}/glassfish/bin/asadmin</exec.asadmin>
+
+        <ri.home>${project.build.directory}/${glassfish.toplevel.dir}/mq</ri.home>
+
         <exec.imqbrokerd>${ri.home}/bin/imqbrokerd</exec.imqbrokerd>
         <exec.imqcmd>${ri.home}/bin/imqcmd</exec.imqcmd>
         <exec.imqobjmgr>${ri.home}/bin/imqobjmgr</exec.imqobjmgr>
         <exec.imqusermgr>${ri.home}/bin/imqusermgr</exec.imqusermgr>
-        <glassfish.home>${project.build.directory}/glassfish7</glassfish.home>
+        
+        <glassfish.home>${project.build.directory}/glassfish8</glassfish.home>
         <glassfish.lib.dir>${glassfish.home}/glassfish/lib</glassfish.lib.dir>
         <glassfish.module.dir>${glassfish.home}/glassfish/modules</glassfish.module.dir>
-        <glassfish.toplevel.dir>glassfish7</glassfish.toplevel.dir>
+        <glassfish.toplevel.dir>glassfish8</glassfish.toplevel.dir>
+        <glassfish.version>8.0.0-JDK17-M7</glassfish.version>
 
-        <jakarta.tck.arquillian.version>11.0.0</jakarta.tck.arquillian.version>
         <!-- mail connection properties -->
         <javamail.password>1234</javamail.password>
         <javamail.protocol>imap</javamail.protocol>
         <javamail.root.path></javamail.root.path>
         <javamail.server>localhost</javamail.server>
         <javamail.username>user01@james.local</javamail.username>
+
+
         <jndi.factory.initial>java.naming.factory.initial=com.sun.jndi.fscontext.RefFSContextFactory</jndi.factory.initial>
         <jndi.fs.dir>/tmp/ri_admin_objects</jndi.fs.dir>
         <jndi.provider.url>java.naming.provider.url=file:///${jndi.fs.dir}</jndi.provider.url>
         <jndiName>mail/Session</jndiName>
 
         <junit.jupiter.version>5.9.1</junit.jupiter.version>
-        <ri.home>${project.build.directory}/${glassfish.toplevel.dir}/mq</ri.home>
-
-        <tck.artifactId>jakarta.jms-tck</tck.artifactId>
-        <tck.version>11.0.0</tck.version>
-        <tck.version>3.1.0</tck.version>
+        <arquillian.core.version>1.9.1.Final</arquillian.core.version>
+        <arquillian.junit>1.9.1.Final</arquillian.junit>
+        <jakarta.tck.arquillian.version>11.0.0</jakarta.tck.arquillian.version>
+        
+        <tck.version>11.0.0-RC7</tck.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -85,12 +92,12 @@
         <dependency>
             <groupId>jakarta.tck</groupId>
             <artifactId>common</artifactId>
-            <version>${jakarta.tck.common.version}</version>
+            <version>${tck.version}</version>
         </dependency>
         <dependency>
             <groupId>jakarta.tck</groupId>
             <artifactId>appclient</artifactId>
-            <version>11.0.0</version>
+            <version>11.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.arquillian.container</groupId>
@@ -111,17 +118,17 @@
         <dependency>
             <groupId>jakarta.tck.arquillian</groupId>
             <artifactId>arquillian-protocol-appclient</artifactId>
-            <version>${project.version}</version>
+            <version>${jakarta.tck.arquillian.version}</version>
         </dependency>
         <dependency>
             <groupId>jakarta.tck.arquillian</groupId>
             <artifactId>arquillian-protocol-common</artifactId>
-            <version>${project.version}</version>
+            <version>${jakarta.tck.arquillian.version}</version>
         </dependency>
         <dependency>
             <groupId>jakarta.tck.arquillian</groupId>
             <artifactId>arquillian-protocol-javatest</artifactId>
-            <version>${project.version}</version>
+            <version>${jakarta.tck.arquillian.version}</version>
         </dependency>
         <dependency>
             <groupId>jakarta.tck.arquillian</groupId>
@@ -503,7 +510,7 @@
                         <configuration>
                             <dependenciesToScan>jakarta.tck:appclient</dependenciesToScan>
                             <includes>
-                                <include>**/ejblink/casesens/*.*</include>
+                                <include>**/deploy/resref/single/*.*</include>
                             </includes>
                             <additionalClasspathElements>
                                 <additionalClasspathElement>${glassfish.module.dir}/angus-mail.jar</additionalClasspathElement>
@@ -525,7 +532,6 @@
                                 <glassfish.home>${project.build.directory}/${glassfish.toplevel.dir}</glassfish.home>
                                 <ts.home>${env.TS_HOME}</ts.home>
                                 <project.basedir>${project.basedir}</project.basedir>
-                                <arquillian.xml>arquillian.xml</arquillian.xml>
                             </systemPropertyVariables>
                             <environmentVariables>
                                 <GLASSFISH_HOME>${project.build.directory}/${glassfish.toplevel.dir}</GLASSFISH_HOME>

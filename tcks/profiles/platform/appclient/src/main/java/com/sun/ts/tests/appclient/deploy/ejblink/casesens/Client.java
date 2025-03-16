@@ -76,8 +76,9 @@ public class Client extends EETest {
   }
   
   
-  @TargetsContainer("javatest")
-	@Deployment(testable = false)
+  @TargetsContainer("tck-appclient")
+  @OverProtocol("appclient")	
+ 	@Deployment(testable = false)
 	public static EnterpriseArchive createDeployment(@ArquillianResource TestArchiveProcessor archiveProcessor)
 			throws IOException {
 		JavaArchive ejbClient = ShrinkWrap.create(JavaArchive.class, "appclient_dep_ejblink_casesens_client.jar");
