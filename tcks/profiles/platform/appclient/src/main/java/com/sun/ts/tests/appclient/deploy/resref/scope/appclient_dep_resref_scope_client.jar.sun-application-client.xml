@@ -21,7 +21,7 @@
 <sun-application-client>
   <resource-ref>
     <res-ref-name>jms/myFactory</res-ref-name>
-    <jndi-name>jms/QueueConnectionFactory</jndi-name>
+    <jndi-name>jms/myQueueConnectionFactory</jndi-name>
     <default-resource-principal>
       <name>j2ee</name>
       <password>j2ee</password>

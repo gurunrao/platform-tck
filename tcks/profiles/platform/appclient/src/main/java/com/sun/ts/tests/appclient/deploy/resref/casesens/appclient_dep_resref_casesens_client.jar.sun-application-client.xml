@@ -21,7 +21,7 @@
 <sun-application-client>
   <resource-ref>
     <res-ref-name>Aloha</res-ref-name>
-    <jndi-name>jms/QueueConnectionFactory</jndi-name>
+    <jndi-name>jms/myQueueConnectionFactory</jndi-name>
     <default-resource-principal>
       <name>j2ee</name>
       <password>j2ee</password>
@@ -29,7 +29,7 @@
   </resource-ref>
   <resource-ref>
     <res-ref-name>aloha</res-ref-name>
-    <jndi-name>jms/TopicConnectionFactory</jndi-name>
+    <jndi-name>jms/myTopicConnectionFactory</jndi-name>
     <default-resource-principal>
       <name>j2ee</name>
       <password>j2ee</password>
