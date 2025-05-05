@@ -71,8 +71,7 @@ public class ClientEJB extends Client implements Serializable {
 
 		ejbClient.addAsManifestResource(new StringAsset("Main-Class: com.sun.ts.tests.common.vehicle.VehicleClient\n"),
 				"MANIFEST.MF");
-		
-		
+
 		JavaArchive ejbVehicle = ShrinkWrap.create(JavaArchive.class, "xa_resXcomp1_ejb_vehicle_ejb.jar");
 		ejbVehicle.addPackages(false, "com.sun.ts.tests.common.vehicle");
 		ejbVehicle.addPackages(false, "com.sun.ts.tests.common.vehicle.ejb");
@@ -84,7 +83,8 @@ public class ClientEJB extends Client implements Serializable {
 			ejbVehicle.addAsManifestResource(resURL, "ejb-jar.xml");
 		}
 
-		resURL = ClientEJB.class.getResource("/com/sun/ts/tests/xa/ee/resXcomp1/xa_resXcomp1_ejb_vehicle_ejb.jar.sun-ejb-jar.xml");
+		resURL = ClientEJB.class
+				.getResource("/com/sun/ts/tests/xa/ee/resXcomp1/xa_resXcomp1_ejb_vehicle_ejb.jar.sun-ejb-jar.xml");
 		if (resURL != null) {
 			ejbVehicle.addAsManifestResource(resURL, "sun-ejb-jar.xml");
 		}
@@ -115,6 +115,7 @@ public class ClientEJB extends Client implements Serializable {
 		ear.addAsModule(ejbClient);
 		ear.addAsModule(ejbVehicle);
 		ear.addAsModule(ejb);
+		
 		return ear;
 	};
 
@@ -126,7 +127,7 @@ public class ClientEJB extends Client implements Serializable {
   
   
   public String getTxRef() {
-	   return "java:comp/env/ejb/MyEjbReferenceEJB";
+	   return "java:comp/env/ejb/MyEjbReference";
  }
 
   /* Run test */
